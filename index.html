@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Demo JS</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body >
+  <form action="" name="myForm" id="formUser">
+    <input type="number" name="id" id="id"  value="" hidden />
+
+    <label for="name">Name : </label>
+    <input type="text" name="name" id="name" value=""  /><br /><br>
+    <p class="errormsg" id="nameerrormsg" style="display: none;color: red;">Please do not enter number.</p>
+<br>
+
+    <label for="email">Email :</label>
+    <input type="" id="email" name="email" value=""   /><br /><br>
+    <p class="errormsg" id="emailerrormsg" style="display: none;color: red;">Please enter valid email address .</p>
+
+    <div >
+
+      <label for="gender">Gender :</label>
+      <label for="">Male</label>
+      <input type="radio" id="gender" name="gender"  value="Male" checked/>
+      <label for="">Female</label>
+      <input type="radio" id="gender" name="gender" value="Female" /><br /><br>
+    </div>
+    <div>
+      <label for="Hobbies">Hobbies :</label>
+      
+      <input type="checkbox"  id="hobbies1" name="hobbie" value="Reading" />
+      <label value="Reading"> Reading</label>
+      
+      <input type="checkbox"  id="hobbies2" name="hobbie" value="Travelling" />
+      <label value="Travelling"> Travelling</label>
+      
+      <input type="checkbox"  id="hobbies3" name="hobbie" value="Sports" />
+      <label value="Sports"> Sports</label>
+      
+      <p class="" id="hobbiesCheck" style="visibility: hidden;color: red;">Please select atleast one Hobbie.</p>
+    </div>
+
+    <label for="countries" name="country">Country :</label>
+    <select name="country" value="" id="country"  text="" onchange="renderStates();renderCities();" 
+      style="outline: none;padding: 0.4rem;border-radius: 5px;border: none;box-shadow: 0 0 10px rgb(202, 202, 202);margin: 0.8rem;" required>
+      <option value="select" type="reset"  selected> Select your country</option>
+    </select>
+    <br />
+    <p class="" id="countryerrormsg" style="display: none;color: red;">Please select your country .</p>
+    <br />
+
+    <label for="State" name="state"></label>State :</label>
+    <select name="state" value="" id="state" text="" type="reset" onchange="renderCities()"
+      style="outline: none;padding:  0.4rem;border-radius: 5px;border: none;box-shadow: 0 0 10px rgb(202, 202, 202);margin: 0.8rem;"
+      >
+      <option value="select" type="reset" selected> Select your State</option>
+    </select>
+    <br />
+    <p class="" id="stateerrormsg" style="display: none;color: red;">Please select your State .</p>
+    <br />
+
+    <label for="City"  name="city">City :</label>
+    <select name="city" value="" id="city" text="" type="reset"
+      style="outline: none;padding: 0.4rem;border-radius: 5px;border: none;box-shadow: 0 0 10px rgb(202, 202, 202);margin: 0.8rem;"
+      >
+      <option value="select" type="reset" selected> Select your City</option>
+    </select>
+    <br />
+    <p class="" id="cityerrormsg" style="display: none;color: red;">Please select your City .</p>
+    <br>
+
+    <button class="btn btn-outline-success" style="margin-left: 70px;" id="saveBtn"  type="submit">Save</button>
+    <button class="btn btn-outline-success" style="display: none;" id="saveEditBtn"  type="submit">Update</button>
+    <button class="btn btn-outline-secondary" type="reset" id="cButton" style="display: none;" onclick="formReset()">Cancel</button>
+    <!-- <button class="btn btn-outline-danger" onclick="deleteUser()" type="submit" id="dButton"
+      style="display: none;">Delete</button> -->
+
+  </form>
+  <br />
+  <br />
+
+  <table class="table table-dark table-striped showUsers">
+    <div class="wrapper">
+      <label for="search">Search :</label>
+      <input type="text" id="searchText" oninput="searchText()"/> <br/><br>
+    
+      <select name="" id="orderSelect" onchange="orderedusers()">
+        <option value="" type="reset" selected> Select Order</option>
+        <option value="default"  type="submit" onselect="showDataIntoTable()"> Default</option>
+        <option value="Ascending"  type="submit" > Ascending</option>
+        <option value="Descending" type="submit" > Descending</option>
+      </select></button>
+
+    </div>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Hobbie</th>
+        <th>Country</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Delete</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+
+    <tbody></tbody>
+  </table>
+
+  <script src="./demo.js"></script>
+  
+</body>
+
+</html>
+
+
+
+

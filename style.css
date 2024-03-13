@@ -1,0 +1,45 @@
+.dColor{
+    background-color: rgb(237, 96, 96);
+    color: white;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.uColor{
+    background-color:skyblue;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+table{
+    background-color: rgb(218, 255, 223);
+}
+table ,th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+}
+
+form{
+    background-color: rgb(235, 235, 235);
+    align-items: left;
+    margin: left;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 350px;
+    border: 2px solid rgb(210, 210, 254);
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+}
+.wrapper{
+    display: flex;
+  justify-content: space-between;
+    width: 27%;
+}
+body{
+    display: inline;
+    background-color: grey;
+}
+
